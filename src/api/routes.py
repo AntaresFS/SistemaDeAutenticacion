@@ -38,7 +38,7 @@ def login():
         return jsonify({"msg": "La contraseña es incorrecta."}), 401
     
      # Crear un token de acceso
-    access_token = create_access_token(identity=user.id)
+    access_token = create_access_token(identity=user.email)
 
     # Crea la respuesta
     response = jsonify({'msg': 'Login exitoso'})
